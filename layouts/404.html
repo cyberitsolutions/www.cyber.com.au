@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <main class="content page-template page-{{ .Slug }}">
+    <article class="post page">
+      <header class="post-header">
+        <a id="back-to-main-page" href="{{ "" | relLangURL }}"><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ .Site.Title }}</a>
+      </header>
+      <h1 class="post-title">404 Not Found</h1>
+      <section class="post-content">
+        <p>The page you requested cannot be found.</p>
+        <p>
+        <a href="{{ .Site.Home.RelPermalink }}">
+          Return to the home page
+        </a>
+        </p>
+      </section>
+    </article>
+  </main>
+{{ end }}
