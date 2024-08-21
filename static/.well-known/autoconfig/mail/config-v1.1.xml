@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!-- Based on https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat -->
+<!-- NOTE: if you have alice@example.com served by mail.example.com, you need to put this on example.com NOT on mail.example.com! -->
+<clientConfig version="1.1">
+
+  <emailProvider id="cyber.com.au">
+    <domain>cyber.com.au</domain>
+    <displayName>Cyber IT</displayName>
+    <displayShortName>Cyber IT</displayShortName>
+    <documentation url="https://kb.cyber.com.au/33317-Cyber-Mail-FR">
+      <descr lang="en">Cyber IT Mail Notes</descr>
+    </documentation>
+
+    <incomingServer type="imap">
+      <hostname>mail.cyber.com.au</hostname>
+      <port>993</port>
+      <socketType>SSL</socketType>
+      <username>%EMAILLOCALPART%</username>
+      <authentication>password-cleartext</authentication>
+    </incomingServer>
+
+    <outgoingServer type="smtp">
+      <hostname>mail.cyber.com.au</hostname>
+      <port>465</port>
+      <socketType>SSL</socketType>
+      <username>%EMAILLOCALPART%</username>
+      <authentication>password-cleartext</authentication>
+    </outgoingServer>
+
+  </emailProvider>
+</clientConfig>
