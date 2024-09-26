@@ -102,3 +102,9 @@ article#client-showcase {
     }
   }
 }
+article#contact form {
+  & input, & textarea {
+    border-radius: .5rem;
+    border-style: solid;
+  }
+}
